@@ -3,7 +3,7 @@
 # ------------------------------
 # Zplug
 # ------------------------------
-source "$(brew --prefix zplug)/init.zsh"
+source "~/.zplug/init.zsh"
 
 # Oh-my-zsh stuff
 zplug "lib/completion", from:oh-my-zsh
