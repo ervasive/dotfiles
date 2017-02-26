@@ -3,7 +3,7 @@
 # ------------------------------
 # Zplug
 # ------------------------------
-source "${0:a:h}/.zplug/init.zsh"
+source $HOME/.zplug/init.zsh
 
 # Oh-my-zsh stuff
 zplug "lib/completion", from:oh-my-zsh
