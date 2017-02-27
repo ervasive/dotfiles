@@ -1230,9 +1230,9 @@
 	<key>TabViewType</key>
 	<integer>1</integer>
 	<key>TerminalMargin</key>
-	<integer>20</integer>
+	<integer>30</integer>
 	<key>TerminalVMargin</key>
-	<integer>20</integer>
+	<integer>30</integer>
 	<key>ToolbeltTools</key>
 	<array>
 		<string>Profiles</string>
