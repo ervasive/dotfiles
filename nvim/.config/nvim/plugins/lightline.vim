@@ -2,6 +2,7 @@
 " Lightline (statusline)
 " -----------------------------
 Plug 'itchyny/lightline.vim'
+autocmd VimEnter * call lightline#colorscheme()
 
 let g:lightline = {
 \     'colorscheme': 'onedark',
@@ -57,7 +58,7 @@ endfunction
 " Custom mode (hide for 'simplified' buffers)
 " ------------------------------
 function! LightlineMode()
-    return s:isSimpleBuffer() ? '' : lightline#mode()
+    return s:isSimpleBuffer() ? '' : strpart(lightline#mode(), 0, 1)
 endfunction
 
 " Custom filename
