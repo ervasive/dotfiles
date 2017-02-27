@@ -4,3 +4,6 @@
 [submodule "zsh/.zplug"]
 	path = zsh/.zplug
 	url = https://github.com/zplug/zplug
+[submodule "fonts/FiraCode"]
+	path = fonts/FiraCode
+	url = https://github.com/tonsky/FiraCode
