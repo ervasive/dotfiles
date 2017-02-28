@@ -1,0 +1,13 @@
+# NeoVIM related
+**/nvim/autoload/plug.vim
+**/nvim/backup/
+**/nvim/plugged/
+**/nvim/undodir/
+Session.vim
+.netrwhist
+
+# Tmux related
+**/.tmux/resurrect
+
+# General
+.DS_Store
