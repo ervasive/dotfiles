@@ -45,6 +45,7 @@ call plug#begin()
     source $NP/lang-elm.vim                      " Plugin(s) for Elm support
     source $NP/lang-haskell.vim                  " Plugin(s) for Haskell support
     source $NP/lang-javascript.vim               " Plugin(s) for JavaScript support
+    source $NP/lang-purescript.vim               " Plugin(s) for PureScript support
     source $NP/lightline.vim                     " Status line
     source $NP/neoformat.vim                     " Formatting code
     source $NP/nerdtree.vim                      " Tree files explorel
