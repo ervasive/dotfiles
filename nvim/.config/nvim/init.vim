@@ -42,6 +42,7 @@ call plug#begin()
     source $NP/easymotion.vim                    " Search and navigate
     source $NP/gitgutter.vim                     " Git diff in the gutter (sign column)
     source $NP/gundo.vim                         " Visualize your Vim undo tree
+    source $NP/lang-elm.vim                      " Plugin(s) for Elm support
     source $NP/lightline.vim                     " Status line
     source $NP/neoformat.vim                     " Formatting code
     source $NP/nerdtree.vim                      " Tree files explorel
