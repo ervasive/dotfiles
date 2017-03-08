@@ -44,6 +44,7 @@ call plug#begin()
     source $NP/gundo.vim                         " Visualize your Vim undo tree
     source $NP/lang-elm.vim                      " Plugin(s) for Elm support
     source $NP/lang-haskell.vim                  " Plugin(s) for Haskell support
+    source $NP/lang-javascript.vim               " Plugin(s) for JavaScript support
     source $NP/lightline.vim                     " Status line
     source $NP/neoformat.vim                     " Formatting code
     source $NP/nerdtree.vim                      " Tree files explorel
