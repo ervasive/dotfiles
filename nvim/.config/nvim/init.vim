@@ -127,7 +127,6 @@ set undodir=~/.config/nvim/undodir//             " Where to save undo files
 "
 " Other
 " -----------------------------
-set mouse=a                                      " Enable mouse support for all modes
 set updatetime=250                               " Make some plugins look more responsive (gitgutter etc.)
 
 if has("mouse")
