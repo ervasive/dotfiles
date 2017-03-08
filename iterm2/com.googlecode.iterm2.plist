@@ -456,7 +456,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>438 253 844 363 0 0 1920 1200 </string>
+	<string>613 574 844 229 0 0 1920 1200 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>269 743 606 456 0 0 1920 1200 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
@@ -466,11 +466,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 1920 1200 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>219 357 796 473 0 0 1920 1200 </string>
+	<string>253 255 918 381 0 0 1920 1200 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 616 592 584 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1920 460 0 0 1920 1200 </string>
+	<string>812 0 1108 632 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>643 146 1000 822 0 0 1920 1200 </string>
 	<key>New Bookmarks</key>
@@ -1104,6 +1104,19 @@
 			<integer>0</integer>
 			<key>Sync Title</key>
 			<false/>
+			<key>Tab Color</key>
+			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.20392156862745098</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.17254901960784313</real>
+				<key>Red Component</key>
+				<real>0.15686274509803921</real>
+			</dict>
 			<key>Tags</key>
 			<array/>
 			<key>Terminal Type</key>
@@ -1119,6 +1132,10 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
+			<false/>
+			<key>Use Tab Color</key>
+			<true/>
+			<key>Use Underline Color</key>
 			<false/>
 			<key>Vertical Spacing</key>
 			<real>1.06884765625</real>
@@ -1208,7 +1225,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-02-24T19:40:18Z</date>
+	<date>2017-03-04T19:38:25Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1232,7 +1249,7 @@
 	<key>TerminalMargin</key>
 	<integer>30</integer>
 	<key>TerminalVMargin</key>
-	<integer>30</integer>
+	<integer>20</integer>
 	<key>ToolbeltTools</key>
 	<array>
 		<string>Profiles</string>
@@ -1256,7 +1273,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.20170223-nightly</string>
+	<string>3.1.20170304-nightly</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
