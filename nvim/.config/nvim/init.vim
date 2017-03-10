@@ -62,6 +62,7 @@ call plug#end()
 " -----------------------------
 set hidden                                       " Preserve hidden buffers
 set virtualedit=all                              " Allow free cursor positioning
+set clipboard+=unnamedplus                       " Use system clipboard for `+` and `*` registers
 
 "
 " Visual
