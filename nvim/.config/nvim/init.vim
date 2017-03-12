@@ -72,7 +72,6 @@ syntax on                                        " Enable syntax highlighting
 set ruler                                        " Show line and column positions (status line overwrites this option)
 set nowrap                                       " Keep long lines
 set number                                       " Display line numbers
-set numberwidth=5                                " Number of columns for line numbers
 set laststatus=2                                 " Always show status line
 set cmdheight=1                                  " Consistent height for command line
 set wildmenu                                     " Enable tab completions for command line
@@ -80,6 +79,7 @@ set wildmode=longest:full,full                   " Completions matches order
 set list!                                        " Enable tabs/spaces/trailing etc. indicators
 set listchars=tab:▸\ ,trail:·                    " Define characters for tabs/spaces/trailing etc. indicators
 set scrolloff=8                                  " Keep 8 lines around cursor
+set foldcolumn=1                                 " Always show foldcolumn to visually separate buffers
 
 " Show `cursorline` and `colorcolumn` only in active buffer
 augroup BufferVisuals
