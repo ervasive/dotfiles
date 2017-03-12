@@ -27,7 +27,6 @@ call plug#begin()
     Plug 'mattn/webapi-vim'                      " An Interface to WEB APIs (dependency for gist-vim)
     Plug 'scrooloose/nerdcommenter'              " Comment/uncomment helper
     Plug 'sheerun/vim-polyglot'                  " Languages pack (syntaxes)
-    Plug 'tmux-plugins/vim-tmux-focus-events'    " Make terminal vim and tmux work better together
     Plug 'tpope/vim-eunuch'                      " Vim sugar for the UNIX shell commands
     Plug 'tpope/vim-fugitive'                    " Git in VIM
     Plug 'tpope/vim-obsession'                   " Continuously updated session files
@@ -41,14 +40,12 @@ call plug#begin()
     source $NP/deoplete.vim                      " Asynchronous completion framework
     source $NP/easymotion.vim                    " Search and navigate
     source $NP/gitgutter.vim                     " Git diff in the gutter (sign column)
-    source $NP/gundo.vim                         " Visualize your Vim undo tree
     source $NP/lang-elm.vim                      " Plugin(s) for Elm support
     source $NP/lang-haskell.vim                  " Plugin(s) for Haskell support
     source $NP/lang-javascript.vim               " Plugin(s) for JavaScript support
     source $NP/lang-purescript.vim               " Plugin(s) for PureScript support
     source $NP/lightline.vim                     " Status line
     source $NP/neoformat.vim                     " Formatting code
-    source $NP/nerdtree.vim                      " Tree files explorel
     source $NP/neoterm.vim                       " Neovim's terminal helper plugin
     source $NP/onedark.vim                       " Coloscheme
     source $NP/ultisnips.vim                     " Snippets manager
