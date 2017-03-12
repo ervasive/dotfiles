@@ -49,6 +49,7 @@ call plug#begin()
     source $NP/lightline.vim                     " Status line
     source $NP/neoformat.vim                     " Formatting code
     source $NP/nerdtree.vim                      " Tree files explorel
+    source $NP/neoterm.vim                       " Neovim's terminal helper plugin
     source $NP/onedark.vim                       " Coloscheme
     source $NP/ultisnips.vim                     " Snippets manager
     source $NP/vim-bbye.vim                      " Delete buffers without closing windows
@@ -128,6 +129,14 @@ set directory=~/.config/nvim/backup//            " Where to save swap files
 " -----------------------------
 set undofile                                     " Maintain undo history between sessions
 set undodir=~/.config/nvim/undodir//             " Where to save undo files
+
+"
+" Nvim terminal emulator
+" -----------------------------
+highlight TermCursor ctermfg=red guifg=red
+
+" Exit terminal mode on `Esc`
+tnoremap <Esc> <C-\><C-n>
 
 "
 " Other
