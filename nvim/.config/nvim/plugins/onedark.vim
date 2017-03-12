@@ -11,4 +11,11 @@ if (has("autocmd") && !has("gui"))
 
     autocmd ColorScheme * call onedark#set_highlight("VertSplit", { "bg": s:black_n1, "fg": s:black_n1 })
     autocmd ColorScheme * call onedark#set_highlight("NonText", { "bg": s:black, "fg": s:black })
+
+    " Status line tweaks
+    autocmd ColorScheme * call onedark#set_highlight("StatusLine", { "bg": s:black_n1, "fg": s:black_n1 })
+    autocmd ColorScheme * let s:palette = g:lightline#colorscheme#onedark#palette
+    autocmd ColorScheme * let s:palette.normal.middle = [ [ s:black_n1.gui, s:black_n1.gui, 'NONE', 'NONE' ] ]
+    autocmd ColorScheme * let s:palette.inactive.middle = s:palette.normal.middle
+    autocmd ColorScheme * let s:palette.tabline.middle = s:palette.normal.middle
 end
