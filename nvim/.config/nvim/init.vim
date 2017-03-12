@@ -70,8 +70,6 @@ set clipboard+=unnamedplus                       " Use system clipboard for `+` 
 " -----------------------------
 syntax on                                        " Enable syntax highlighting
 set ruler                                        " Show line and column positions (status line overwrites this option)
-set cursorline                                   " Highlight cursor line
-set cc=80                                        " 80 characters delimiter
 set nowrap                                       " Keep long lines
 set number                                       " Display line numbers
 set numberwidth=5                                " Number of columns for line numbers
@@ -82,6 +80,20 @@ set wildmode=longest:full,full                   " Completions matches order
 set list!                                        " Enable tabs/spaces/trailing etc. indicators
 set listchars=tab:▸\ ,trail:·                    " Define characters for tabs/spaces/trailing etc. indicators
 set scrolloff=8                                  " Keep 8 lines around cursor
+
+" Show `cursorline` and `colorcolumn` only in active buffer
+augroup BufferVisuals
+    au!
+    au VimEnter * setlocal cursorline
+    au WinEnter * setlocal cursorline
+    au BufWinEnter * setlocal cursorline
+    au WinLeave * setlocal nocursorline
+
+    au VimEnter * setlocal colorcolumn=81
+    au WinEnter * setlocal colorcolumn=81
+    au BufWinEnter * setlocal colorcolumn=81
+    au WinLeave * setlocal colorcolumn=""
+augroup END
 
 " Enable 24-bit colors
 if (has("termguicolors"))
