@@ -2,7 +2,6 @@
 " Lightline (statusline)
 " -----------------------------
 Plug 'itchyny/lightline.vim'
-autocmd VimEnter * call lightline#colorscheme()
 
 let g:lightline = {
 \     'colorscheme': 'onedark',
