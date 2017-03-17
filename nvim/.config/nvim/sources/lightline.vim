@@ -4,7 +4,6 @@
 Plug 'itchyny/lightline.vim'
 
 let g:lightline = {
-\     'colorscheme': 'onedark',
 \     'active': {
 \         'left': [
 \             [ 'mode', 'paste' ],

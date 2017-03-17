@@ -2,7 +2,7 @@
 " Plugins - START
 " -----------------------------
 let $NR = fnamemodify( $MYVIMRC, ':p:h' )        " NeoVim root path
-let $NP = $NR . '/plugins'                       " NeoVim plugins path
+let $NP = $NR . '/sources'                       " NeoVim plugins path
 
 "
 " Get Plug.vim if not installed
