@@ -20,7 +20,6 @@ call plug#begin()
     Plug 'editorconfig/editorconfig-vim'         " Consistent coding styles
     Plug 'ervandew/supertab'                     " Perform all your vim insert mode completions with Tab
     Plug 'honza/vim-snippets'                    " Snippets for various programming languages
-    Plug 'majutsushi/tagbar'                     " Displays tags in a window
     Plug 'mattn/emmet-vim'                       " Expand HTML/CSS abbreviations
     Plug 'mattn/gist-vim'                        " Manage gists
     Plug 'mattn/webapi-vim'                      " An Interface to WEB APIs (dependency for gist-vim)
@@ -48,6 +47,7 @@ call plug#begin()
     source $NP/neoformat.vim                     " Formatting code
     source $NP/neoterm.vim                       " Neovim's terminal helper plugin
     source $NP/onedark.vim                       " Coloscheme
+    source $NP/tagbar.vim                        " Displays tags in a window
     source $NP/ultisnips.vim                     " Snippets manager
     source $NP/vim-bbye.vim                      " Delete buffers without closing windows
 call plug#end()
