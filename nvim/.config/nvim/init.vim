@@ -20,7 +20,6 @@ call plug#begin()
     Plug 'editorconfig/editorconfig-vim'         " Consistent coding styles
     Plug 'ervandew/supertab'                     " Perform all your vim insert mode completions with Tab
     Plug 'honza/vim-snippets'                    " Snippets for various programming languages
-    Plug 'justinmk/vim-dirvish'                  " Directory viewer for Vim
     Plug 'majutsushi/tagbar'                     " Displays tags in a window
     Plug 'mattn/emmet-vim'                       " Expand HTML/CSS abbreviations
     Plug 'mattn/gist-vim'                        " Manage gists
@@ -38,6 +37,7 @@ call plug#begin()
     source $NP/ale.vim                           " Asynchronous Lint Engine
     source $NP/denite.vim                        " Fuzzy search for files, buffers etc.
     source $NP/deoplete.vim                      " Asynchronous completion framework
+    source $NP/dirvish.vim                       " Directory viewer for Vim
     source $NP/easymotion.vim                    " Search and navigate
     source $NP/gitgutter.vim                     " Git diff in the gutter (sign column)
     source $NP/lang-elm.vim                      " Plugin(s) for Elm support
