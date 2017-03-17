@@ -34,6 +34,9 @@ call plug#begin()
 
     " PLugins with settings
     source $NP/ale.vim                           " Asynchronous Lint Engine
+    source $NP/colors.vim                        " Colorschemes helpers
+    source $NP/colors-onedark.vim                " Colorschemes
+    source $NP/colors-solarized.vim              " Colorschemes
     source $NP/denite.vim                        " Fuzzy search for files, buffers etc.
     source $NP/deoplete.vim                      " Asynchronous completion framework
     source $NP/dirvish.vim                       " Directory viewer for Vim
@@ -46,7 +49,6 @@ call plug#begin()
     source $NP/lightline.vim                     " Status line
     source $NP/neoformat.vim                     " Formatting code
     source $NP/neoterm.vim                       " Neovim's terminal helper plugin
-    source $NP/onedark.vim                       " Coloscheme
     source $NP/tagbar.vim                        " Displays tags in a window
     source $NP/ultisnips.vim                     " Snippets manager
     source $NP/vim-bbye.vim                      " Delete buffers without closing windows
@@ -96,12 +98,6 @@ augroup END
 if (has("termguicolors"))
     set termguicolors
 endif
-
-"
-" Colorscheme
-" -----------------------------
-set background=dark                              " Adapt colors for selected colorscheme
-colorscheme onedark                              " Colorscheme (installed through plugin 'onedark.vim')
 
 "
 " Indentation
