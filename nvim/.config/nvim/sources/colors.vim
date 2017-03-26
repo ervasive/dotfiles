@@ -49,7 +49,7 @@ function! colors#activate(color)
 
     " Can't change iTerm profile from Neovim interactively
     " https://github.com/neovim/neovim/issues/1496
-     execute "silent !printf '\e]50;SetProfile=" . l:active.term_profile . "\x7'"
+    execute "silent !printf '\e]50;SetProfile=" . l:active.term_profile . "\x7'"
 
     " Re-run `ColorScheme` autocommand to update colorcheme
     doautocmd ColorScheme *
@@ -62,7 +62,7 @@ function! colors#activate(color)
     endif
 endfunction
 
-au VimEnter * call colors#activate('')
+au VimEnter,TermOpen * call colors#activate('')
 
 "
 " Helper function to ease colorscheme modifications
