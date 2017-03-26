@@ -20,11 +20,13 @@ call plug#begin()
     Plug 'editorconfig/editorconfig-vim'         " Consistent coding styles
     Plug 'ervandew/supertab'                     " Perform all your vim insert mode completions with Tab
     Plug 'honza/vim-snippets'                    " Snippets for various programming languages
+    Plug 'jiangmiao/auto-pairs'
     Plug 'mattn/emmet-vim'                       " Expand HTML/CSS abbreviations
     Plug 'mattn/gist-vim'                        " Manage gists
     Plug 'mattn/webapi-vim'                      " An Interface to WEB APIs (dependency for gist-vim)
     Plug 'scrooloose/nerdcommenter'              " Comment/uncomment helper
     Plug 'sheerun/vim-polyglot'                  " Languages pack (syntaxes)
+    Plug 'terryma/vim-expand-region'             " Flexible selection (expand-shrink)
     Plug 'tpope/vim-eunuch'                      " Vim sugar for the UNIX shell commands
     Plug 'tpope/vim-fugitive'                    " Git in VIM
     Plug 'tpope/vim-obsession'                   " Continuously updated session files
