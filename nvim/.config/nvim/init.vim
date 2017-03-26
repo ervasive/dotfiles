@@ -80,6 +80,7 @@ set wildmode=longest:full,full                   " Completions matches order
 set list!                                        " Enable tabs/spaces/trailing etc. indicators
 set listchars=tab:▸\ ,trail:·                    " Define characters for tabs/spaces/trailing etc. indicators
 set scrolloff=8                                  " Keep 8 lines around cursor
+set sidescrolloff=15                             " Keep 15 rows on horizontal scroll
 set foldcolumn=1                                 " Always show foldcolumn to visually separate buffers
 
 " Show `cursorline` and `colorcolumn` only in active buffer
@@ -162,3 +163,7 @@ if has("autocmd")
         \   exe "normal g`\"" |
         \ endif
 endif
+
+" Keep selection after in/outdent
+vnoremap < <gv
+vnoremap > >gv
