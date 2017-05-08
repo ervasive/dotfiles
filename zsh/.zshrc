@@ -92,6 +92,79 @@ function udd() {
   nvim --headless -c 'PlugUpdate' -c 'PlugUpgrade' -c 'qa!' > /dev/null 2>&1
 }
 
+#
+# Update system installed packages
+# ------------------------------
+function usp() {
+  # Brew packages
+  if hash brew 2>/dev/null; then
+    echo "============================================================"
+    echo "Updating Brew packages..."
+    echo "============================================================"
+    brew update && brew upgrade
+  fi
+
+  # Yarn packages
+  if hash yarn 2>/dev/null; then
+    echo ""
+    echo ""
+    echo "============================================================"
+    echo "Updating Yarn packages..."
+    echo "============================================================"
+    yarn global upgrade
+  fi
+
+  # NPM packages
+  if hash npm 2>/dev/null; then
+    echo ""
+    echo ""
+    echo "============================================================"
+    echo "Updating NPM packages..."
+    echo "============================================================"
+    npm update -g
+  fi
+
+  # Composer packages
+  if hash composer 2>/dev/null; then
+    echo ""
+    echo ""
+    echo "============================================================"
+    echo "Updating Composer packages..."
+    echo "============================================================"
+    composer global update
+  fi
+
+  # Stack packages
+  if hash stack 2>/dev/null; then
+    echo ""
+    echo ""
+    echo "============================================================"
+    echo "Updating Stack..."
+    echo "============================================================"
+    stack update && stack upgrade
+  fi
+
+  # Pip packages
+  if hash pip 2>/dev/null; then
+    echo ""
+    echo ""
+    echo "============================================================"
+    echo "Updating Python packages..."
+    echo "============================================================"
+    pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+  fi
+
+  # Pip3 packages
+  if hash pip3 2>/dev/null; then
+    echo ""
+    echo ""
+    echo "============================================================"
+    echo "Updating Python 3 packages..."
+    echo "============================================================"
+    pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+  fi
+}
+
 # Copy text to system clipboard (https://github.com/wincent/clipper)
 # ------------------------------
 alias clip="nc -U ~/.clipper.sock"
