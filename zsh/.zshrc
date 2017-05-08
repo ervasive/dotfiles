@@ -107,6 +107,11 @@ alias clip="nc -U ~/.clipper.sock"
 # ------------------------------
 export PATH="/usr/local/sbin:$HOME/.local/bin:$PATH"
 
+if hash stack 2>/dev/null; then
+  export PATH="$PATH:`stack path --bin-path`"
+fi
+
+export PATH="~/.composer/vendor/bin:$PATH"
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
