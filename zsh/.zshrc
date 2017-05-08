@@ -64,6 +64,39 @@ function nvim() {
     fi
 }
 
+#
+# Update dotfile dependencies (plugins and stuff)
+# ------------------------------
+function udd() {
+  echo "============================================================"
+  echo "Updating Dotfiles submodules..."
+  echo "============================================================"
+  cd ~/.dotfiles && git submodule foreach --recursive git pull origin master
+
+  # Zplug
+  echo ""
+  echo ""
+  echo "============================================================"
+  echo "Updating ZSH plugins..."
+  echo "============================================================"
+  zplug update
+
+  # Tmux plugin manager
+  echo ""
+  echo ""
+  echo "============================================================"
+  echo "Updating Tmux plugins..."
+  echo "============================================================"
+  $HOME/.dotfiles/tmux/.tmux/plugins/tpm/bin/update_plugins all
+
+  # Neovim
+  echo ""
+  echo ""
+  echo "============================================================"
+  echo "Updating Neovim plugins & plugin manager..."
+  echo "============================================================"
+  nvim --headless -c 'PlugUpdate' -c 'PlugUpgrade' -c 'qa!' > /dev/null 2>&1
+}
 
 # Copy text to system clipboard (https://github.com/wincent/clipper)
 # ------------------------------
