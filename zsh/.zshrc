@@ -65,6 +65,10 @@ function nvim() {
 }
 
 
+# Copy text to system clipboard (https://github.com/wincent/clipper)
+# ------------------------------
+alias clip="nc -U ~/.clipper.sock"
+
 #
 # Additional pathes
 # ------------------------------

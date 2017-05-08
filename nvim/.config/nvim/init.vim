@@ -167,3 +167,7 @@ endif
 " Keep selection after in/outdent
 vnoremap < <gv
 vnoremap > >gv
+
+" Copy last yanked text to system clipboard within tmux session
+" https://github.com/wincent/clipper
+nnoremap <leader>y :call system('nc -U ~/.clipper.sock', @0)<CR>
