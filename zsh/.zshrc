@@ -39,11 +39,7 @@ zplug load
 #
 # Preferred editor for local and remote sessions
 # ------------------------------
-if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='nvim'
-else
-    export EDITOR='vim'
-fi
+export EDITOR='nvim'
 
 #
 # Vim/Neovim session restore
@@ -178,7 +174,8 @@ if hash stack 2>/dev/null; then
   export PATH="$PATH:`stack path --bin-path`"
 fi
 
-export PATH="~/.composer/vendor/bin:$PATH"
+export PATH="$HOME/.node_modules/bin:$PATH"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
