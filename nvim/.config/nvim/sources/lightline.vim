@@ -103,11 +103,8 @@ function! LightlineAleOK()
         return ''
     endif
 
-    let l:buffer = bufnr('%')
-    let [l:error_format, l:warning_format, l:no_errors] = g:ale_statusline_format
-    let [l:error_count, l:warning_count] = ale#statusline#Count(l:buffer)
-
-    return !l:error_count && !l:warning_count ? l:no_errors : ''
+    let l:counts = ale#statusline#Count(bufnr(''))
+    return l:counts.total == 0 ? 'OK' : ''
 endfunction
 
 function! LightlineAleWR()
@@ -115,11 +112,8 @@ function! LightlineAleWR()
         return ''
     endif
 
-    let l:buffer = bufnr('%')
-    let [l:error_format, l:warning_format, l:no_errors] = g:ale_statusline_format
-    let [l:error_count, l:warning_count] = ale#statusline#Count(l:buffer)
-
-    return l:warning_count ? printf(l:warning_format, l:warning_count) : ''
+    let l:counts = ale#statusline#Count(bufnr(''))
+    return l:counts.style_error ? l:counts.style_error : ''
 endfunction
 
 function! LightlineAleER()
@@ -127,11 +121,8 @@ function! LightlineAleER()
         return ''
     endif
 
-    let l:buffer = bufnr('%')
-    let [l:error_format, l:warning_format, l:no_errors] = g:ale_statusline_format
-    let [l:error_count, l:warning_count] = ale#statusline#Count(l:buffer)
-
-    return l:error_count ? printf(l:error_format, l:error_count) : ''
+    let l:counts = ale#statusline#Count(bufnr(''))
+    return l:counts.error ? l:counts.error : ''
 endfunction
 
 augroup UpdateAleLightLine

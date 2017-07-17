@@ -6,6 +6,7 @@
 " Hold aggregated colorschemes
 " -----------------------------
 let g:custom_colors = {}
+let g:custom_colors_term_profile = $ITERM_PROFILE
 
 "
 " Register colorscheme and put it into `g:custom_colors`
@@ -34,7 +35,7 @@ function! colors#activate(color)
 
     for [color, props] in items(g:custom_colors)
         " Determine active colorscheme
-        if a:color == color || $NVIM_COLOR == color || props.default
+        if a:color == color || g:custom_colors_term_profile == props.term_profile || props.default
             let l:active.color = color
             call extend(l:active, props)
         endif
