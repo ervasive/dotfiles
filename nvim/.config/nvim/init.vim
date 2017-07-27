@@ -176,4 +176,4 @@ vnoremap > >gv
 
 " Copy last yanked text to system clipboard within tmux session
 " https://github.com/wincent/clipper
-nnoremap <leader>y :call system('nc -U ~/.clipper.sock', @0)<CR>
+nnoremap <leader>y :call system('nc -N localhost 8377', @0)<CR>

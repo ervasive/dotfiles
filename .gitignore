@@ -9,5 +9,8 @@ Session.vim
 # Tmux related
 **/.tmux/resurrect
 
+# Clipper related
+**/clipper/.config/clipper/logs/*.log
+
 # General
 .DS_Store
