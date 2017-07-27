@@ -171,11 +171,20 @@ alias clip="nc -U ~/.clipper.sock"
 export PATH="/usr/local/sbin:$HOME/.local/bin:$PATH"
 
 if hash stack 2>/dev/null; then
-  export PATH="$PATH:`stack path --bin-path`"
+  PATH="$PATH:`stack path --bin-path`"
 fi
 
-export PATH="$HOME/.node_modules/bin:$PATH"
-export PATH="$HOME/.composer/vendor/bin:$PATH"
+if hash npm 2>/dev/null; then
+  PATH="$HOME/.node_modules/bin:$PATH"
+fi
+
+if hash composer 2>/dev/null; then
+  PATH="$HOME/.composer/vendor/bin:$PATH"
+fi
+
+if hash ruby 2>/dev/null && hash gem 2>/dev/null; then
+  PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+fi
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
