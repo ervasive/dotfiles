@@ -1,0 +1,61 @@
+Config
+  { font = "xft:DejaVu Sans Mono:pixelsize=12:antialias=true"
+  , additionalFonts = []
+  , bgColor = "#14161A"
+  , fgColor = "grey"
+  , alpha = 255
+  , position = TopSize L 100 24
+  , textOffset = -1
+  , iconOffset = -1
+  , lowerOnStart = True
+  , pickBroadest = False
+  , persistent = False
+  , hideOnStart = False
+  , iconRoot = "."
+  , allDesktops = True
+  , overrideRedirect = True
+  , commands =
+    [ Run Weather "EGPF"
+      [ "-t","Chisinau: <tempC>C"
+      , "-L","18","-H","25"
+      , "--normal","green"
+      , "--high","red"
+      , "--low","lightblue"
+      ] 36000
+
+    , Run Network "eth0"
+      [ "-L","0","-H","32"
+      , "--normal","green","--high","red"
+      ] 10
+
+    , Run Network "eth1"
+      [ "-L","0","-H","32"
+      , "--normal","green","--high","red"
+      ] 10
+
+    , Run Cpu
+      [ "-L","3","-H","50"
+      , "--normal","green","--high","red"
+      ] 50
+
+    , Run Memory ["-t","Mem: <usedratio>%"] 50
+
+    , Run Swap [] 10
+
+    , Run Com "uname" ["-s","-r"] "" 36000
+
+    , Run Date "%a %b %d %Y %H:%M" "date" 10
+
+    , Run Kbd
+      [ ("us", "US")
+      , ("ru", "RU")
+      ]
+
+    , Run Volume "default" "Master" [] 10
+
+    , Run UnsafeStdinReader
+    ]
+    , sepChar = "%"
+    , alignSep = "}{"
+    , template = "%UnsafeStdinReader%}{%cpu%  %memory%  %default:Master% %kbd%  <fc=#ee9a00>%date%</fc>  "
+  }

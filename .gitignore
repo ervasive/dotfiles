@@ -12,5 +12,13 @@ Session.vim
 # Clipper related
 **/clipper/.config/clipper/logs/*.log
 
+# Xmonad
+**/.xmonad/.stack-work
+**/.xmonad/xmonad.state
+**/.xmonad/xmonad.hi
+**/.xmonad/xmonad.o
+**/.xmonad/xmonad.errors
+**/.xmonad/xmonad-x86_64-linux
+
 # General
 .DS_Store
